@@ -70,3 +70,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+UnityRealTimeCommunication/Library/Artifacts/*
+UnityRealTimeCommunication/Library/BurstCache/*
+UnityRealTimeCommunication/Library/PackageCache/*
+UnityRealTimeCommunication/Library/PackageCache/*/*/*/*/*/*
+UnityRealTimeCommunication/Library/ShaderCache/*
+
+*.log
