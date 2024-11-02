@@ -1,0 +1,7 @@
+services:
+  app:
+    image: node:lts
+    container_name: NodeJS
+    volumes:
+      - ./src:/src
+    working_dir: "/src"
