@@ -1,7 +1,12 @@
 services:
-  app:
+  sample-unity-nodejs:
     image: node:lts
     container_name: NodeJS
+    tty: true
+    ports:
+     - '3000:3000'
+     - '8000:8000'
     volumes:
-      - ./src:/src
-    working_dir: "/src"
+     - ../../:/opt/unity-nodejs
+    command: >
+     bash -c "cd /opt/unity-node-js && npm install && npm install nodemon -g && nodemon"

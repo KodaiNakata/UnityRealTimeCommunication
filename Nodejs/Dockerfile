@@ -1,5 +1,5 @@
 FROM node
 
-WORKDIR ./src
+WORKDIR /opt/unity-nodejs
 COPY package*.json ./
 RUN npm install
