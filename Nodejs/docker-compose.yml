@@ -7,6 +7,6 @@ services:
      - '3000:3000'
      - '8000:8000'
     volumes:
-     - /opt/unity-nodejs
+     - ./src:/opt/unity-nodejs
     command: >
-     bash -c "cd /opt/unity-node-js && npm install && npm install nodemon -g && nodemon"
+     bash -c "cd /opt/unity-nodejs && npm install && npm install nodemon -g && nodemon"
