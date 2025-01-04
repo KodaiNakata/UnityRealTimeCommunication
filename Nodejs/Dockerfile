@@ -1,11 +1,15 @@
 # ベースイメージとしてNode.jsのltsを使用
 FROM node:lts
 
+RUN apt-get update -y && \
+    apt-get clean all
+
 # 作業ディレクトリを設定
 WORKDIR /opt/unity-nodejs
 
-# package.jsonをコピーして依存関係をインストール
-COPY package.json ./
+# ホスト側のNODEJSフォルダをコンテナ側の'/opt/unity-nodejs'ディレクトリにコピー
+COPY ./package*.json .
+
 RUN npm install
 
 # コンテナを終了させないためのコマンド

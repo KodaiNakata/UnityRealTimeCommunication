@@ -3,10 +3,13 @@ services:
     image: node:lts
     container_name: NodeJS
     tty: true
+    build:
+        context: ./
+        dockerfile: Dockerfile
     ports:
      - '3000:3000'
      - '8000:8000'
     volumes:
-     - ./src:/opt/unity-nodejs
+     - .:/opt/unity-nodejs
     command: >
      bash -c "cd /opt/unity-nodejs && npm install && npm install nodemon -g && nodemon"
