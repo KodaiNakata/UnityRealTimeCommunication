@@ -1,11 +1,15 @@
-const PORT = 33333
+'use strict';
+const express = require('express');
 
-const dgram = require('dgram');
-const server = dgram.createSocket('udp4');
+// Constants
+const PORT = 8080;
+const HOST = '0.0.0.0';
 
-server.on('error', (err) => {
-    console.log('server error:\n${err.stack}');
-    server.close();
+// App
+const app = express();
+app.get('/', (req, res) => {
+    res.send('Hello World');
 });
 
-server.bind(PORT);
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);
