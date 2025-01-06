@@ -77,3 +77,4 @@ UnityRealTimeCommunication/Library/PackageCache/*/*/*/*/*/*
 UnityRealTimeCommunication/Library/ShaderCache/*
 
 *.log
+Nodejs/src/node_modules/*
